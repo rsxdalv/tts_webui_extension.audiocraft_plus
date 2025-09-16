@@ -985,17 +985,17 @@ def ui_full(launch_kwargs):
 def extension__tts_generation_webui():
     ui_full_inner()
     return {
-        "package_name": "extension_audiocraft_plus",
-        "title_name": "Audiocraft Plus",
-        "requirements": "--dry-run temp\\extension_audiocraft_plus",
-        "description": "AudioCraft Plus is an all-in-one WebUI for the original AudioCraft, adding many quality features on top.",
-        "website": "https://github.com/GrandaddyShmax/audiocraft_plus",
-        "version": "2.0.6",
+        "package_name": "tts_webui_extension.audiocraft_plus",
         "name": "AudioCraft Plus",
-        "author": "GrandaddyShmax",
-        "extension_website": "https://github.com/rsxdalv/extension_audiocraft_plus",
-        "extension_author": "rsxdalv",
+        "requirements": "git+https://github.com/rsxdalv/tts_webui_extension.audiocraft_plus@main",
+        "description": "AudioCraft Plus is an all-in-one WebUI for the original AudioCraft, adding many quality features on top.",
         "extension_type": "interface",
+        "extension_class": "audio-music-generation",
+        "author": "GrandaddyShmax",
+        "extension_author": "rsxdalv",
+        "license": "MIT",
+        "website": "https://github.com/GrandaddyShmax/audiocraft_plus",
+        "extension_website": "https://github.com/rsxdalv/tts_webui_extension.audiocraft_plus",
         "extension_platform_version": "0.0.1"
     }
 

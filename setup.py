@@ -2,7 +2,7 @@ import setuptools
 
 # todo - fix metadata
 setuptools.setup(
-    name="extension_audiocraft_plus",
+    name="tts_webui_extension.audiocraft_plus",
     packages=setuptools.find_namespace_packages(),
     version="2.0.7",
     author="lj1995",
