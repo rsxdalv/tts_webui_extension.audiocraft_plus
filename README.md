@@ -12,7 +12,7 @@ pip install git+https://github.com/rsxdalv/extension_audiocraft_plus@main#egg=ex
 ## Usage
 
 ```python
-from extension_audiocraft_plus.main import ui_full, ui_full_inner
+from tts_webui_extension.audiocraft_plus.main import ui_full, ui_full_inner
 
 launch_kwargs = {
     "server_name": "0.0.0.0",
