@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tts_webui_extension.audiocraft_plus"
+version = "2.0.7"
+description = "An easy-to-use Voice Conversion framework based on VITS"
+authors = [
+    {name = "lj1995"}
+]
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "audiocraft>=1.2",
+    "pytaglib",
+]
+
+[project.urls]
+Homepage = "https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+# This will find all namespace packages automatically
+namespaces = true
