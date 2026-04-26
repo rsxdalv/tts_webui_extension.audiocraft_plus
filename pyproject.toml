@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tts_webui_extension.audiocraft_plus"
-version = "2.0.7"
+version = "2.0.8"
 description = "An easy-to-use Voice Conversion framework based on VITS"
 authors = [
     {name = "lj1995"}
@@ -16,8 +16,10 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
-    "audiocraft>=1.2",
+    "tts-webui.audiocraft>=1.4.0a2",
     "pytaglib",
+    "gradio==4.44.1",
+    "huggingface_hub<1.0",
 ]
 
 [project.urls]
@@ -25,7 +27,8 @@ Homepage = "https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebU
 
 [tool.setuptools]
 include-package-data = true
+packages = ["tts_webui_extension.audiocraft_plus"]
 
-[tool.setuptools.packages.find]
-# This will find all namespace packages automatically
-namespaces = true
+[tool.setuptools.exclude-package-data]
+# Explicitly block the recursion
+"*" = ["build/**", "cache/**", "dist/**", ".uv_cache/**"]

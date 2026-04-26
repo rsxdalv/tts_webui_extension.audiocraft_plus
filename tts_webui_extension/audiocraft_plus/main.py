@@ -1090,7 +1090,7 @@ def ui_full_inner():
                     with gr.Row():
                         model = gr.Radio(["melody", "small", "medium", "large", "custom"], label="Model", value="large", interactive=True, scale=1)
                         with gr.Column():
-                            dropdown = gr.Dropdown(choices=get_available_folders(), value=("No models found" if len(get_available_folders()) < 1 else get_available_folders()[0]), label='Custom Model (models folder)', elem_classes='slim-dropdown', interactive=True)
+                            dropdown = gr.Dropdown(choices=get_available_folders(), value=("No models found" if len(get_available_folders()) < 1 else get_available_folders()[0]), label='Custom Model (models folder)', elem_classes='slim-dropdown', interactive=True, allow_custom_value=True)
                             create_refresh_button(dropdown, lambda: None, lambda: {'choices': get_available_folders()}, 'refresh-button')
                     with gr.Row():
                         decoder = gr.Radio(["Default", "MultiBand_Diffusion"], label="Decoder", value="Default", interactive=True)
